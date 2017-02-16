@@ -1,6 +1,6 @@
 {
   "name": "@justinc/extract-duplicates",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Extract duplicate elements from an Iterable",
   "main": "src/index.js",
   "scripts": {
