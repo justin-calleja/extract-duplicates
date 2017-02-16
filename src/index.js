@@ -4,13 +4,14 @@
  * When deciding whether an element is a duplicate, the native
  * Set's equality is used (for performance reasons). This is value equality.
  * @example
- * // returns [1,2]
+ * const extractDuplicates = require('@justinc/extract-duplicates')
  * extractDuplicates([1,2,1,1,2,3])
+ * // Set { 1, 2 }
  *
  * @param  {Iterable<*>} iterable
  * @return {Set<*>}
  */
-module.exports = function extractDuplicates (iterable) {
+function extractDuplicates (iterable) {
   let set = new Set()
   let duplicates = new Set()
 
@@ -24,3 +25,5 @@ module.exports = function extractDuplicates (iterable) {
 
   return duplicates
 }
+
+module.exports = extractDuplicates

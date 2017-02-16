@@ -1,16 +1,29 @@
 {
   "name": "@justinc/extract-duplicates",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Extract duplicate elements from an Iterable",
   "main": "src/index.js",
   "scripts": {
+    "readme:clean": "rm -f README.md",
+    "readme:install": "echo \"# Install\n\n\\`npm i @justinc/extract-duplicates\\`\n\" >> README.md",
+    "readme:jsdoc2md": "jsdoc2md ./src/index.js >> README.md",
+    "readme": "npm run readme:clean && npm run readme:install && npm run readme:jsdoc2md",
+    "prepublish": "npm run readme && npm run lint && npm run test",
+    "lint": "standard",
     "test": "ava"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/justin-calleja/extract-duplicates.git"
   },
-  "keywords": [],
+  "keywords": [
+    "duplicate",
+    "duplicates",
+    "iterable",
+    "array",
+    "extract",
+    "find"
+  ],
   "author": "Justin Calleja <calleja.justin@gmail.com>",
   "license": "ISC",
   "bugs": {
@@ -19,6 +32,7 @@
   "homepage": "https://github.com/justin-calleja/extract-duplicates#readme",
   "devDependencies": {
     "ava": "^0.18.1",
+    "jsdoc-to-markdown": "^3.0.0",
     "standard": "^8.6.0"
   }
 }
