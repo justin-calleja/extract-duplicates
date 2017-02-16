@@ -8,6 +8,7 @@
     "readme:install": "echo \"# Install\n\n\\`npm i @justinc/extract-duplicates\\`\n\" >> README.md",
     "readme:jsdoc2md": "jsdoc2md ./src/index.js >> README.md",
     "readme": "npm run readme:clean && npm run readme:install && npm run readme:jsdoc2md",
+    "postversion": "npm publish --access=public && git push --follow-tags",
     "prepublish": "npm run readme && npm run lint && npm run test",
     "lint": "standard",
     "test": "ava"

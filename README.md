@@ -14,7 +14,7 @@ Set's equality is used (for performance reasons). This is value equality.
 
 | Param | Type |
 | --- | --- |
-| iterable | <code>Iterable.&lt;\*&gt;</code> |
+| iterable | <code>Iterable.&lt;\*&gt;</code> | 
 
 **Example**  
 ```js
